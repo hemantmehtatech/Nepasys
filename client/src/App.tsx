@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import Home from "@/pages/home";
 import Course from "@/pages/course";
 import Contact from "@/pages/contact";
+import About from "@/pages/about";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -19,6 +20,7 @@ function Router() {
           <Route path="/" component={Home} />
           <Route path="/courses/:slug" component={Course} />
           <Route path="/contact" component={Contact} />
+          <Route path="/about" component={About} />
           <Route component={NotFound} />
         </Switch>
       </main>
