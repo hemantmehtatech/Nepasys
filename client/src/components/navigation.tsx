@@ -1,0 +1,34 @@
+import { Link, useLocation } from "wouter";
+import { cn } from "@/lib/utils";
+
+export default function Navigation() {
+  const [location] = useLocation();
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/contact", label: "Contact" }
+  ];
+
+  return (
+    <header className="border-b">
+      <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <Link href="/">
+          <a className="text-xl font-bold">TechTraining</a>
+        </Link>
+
+        <div className="flex gap-6">
+          {links.map(link => (
+            <Link key={link.href} href={link.href}>
+              <a className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                location === link.href && "text-primary"
+              )}>
+                {link.label}
+              </a>
+            </Link>
+          ))}
+        </div>
+      </nav>
+    </header>
+  );
+}
