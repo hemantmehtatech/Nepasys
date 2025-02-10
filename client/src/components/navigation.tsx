@@ -14,18 +14,18 @@ export default function Navigation() {
     <header className="border-b">
       <nav className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
-          <a className="text-xl font-bold">TechTraining</a>
+          <span className="text-xl font-bold cursor-pointer">TechTraining</span>
         </Link>
 
         <div className="flex gap-6">
           {links.map(link => (
             <Link key={link.href} href={link.href}>
-              <a className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
+              <span className={cn(
+                "text-sm font-medium transition-colors hover:text-primary cursor-pointer",
                 location === link.href && "text-primary"
               )}>
                 {link.label}
-              </a>
+              </span>
             </Link>
           ))}
         </div>
