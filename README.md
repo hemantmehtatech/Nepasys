@@ -1,15 +1,5 @@
-# TechTraining Platform
-
-A comprehensive IT training and technology services platform built with React, Express, and TypeScript.
-
-## Features
-
-- Professional course listings
-- Technology service offerings
-- Contact and inquiry system
-- Newsletter subscription
-- Responsive design
-- Team and testimonials showcase
+git clone [your-replit-repository-url]
+```
 
 ## Getting Started
 
@@ -20,13 +10,12 @@ A comprehensive IT training and technology services platform built with React, E
 
 ### Installation
 
-1. Clone or download this repository
-2. Navigate to the project directory:
+1. Navigate to the project directory:
 ```bash
 cd tech-training-platform
 ```
 
-3. Install dependencies:
+2. Install dependencies:
 ```bash
 npm install
 ```
@@ -53,32 +42,3 @@ To start the production server:
 
 ```bash
 npm start
-```
-
-## Project Structure
-
-- `/client` - Frontend React application
-  - `/src/components` - Reusable React components
-  - `/src/pages` - Page components
-  - `/src/lib` - Utility functions and configurations
-- `/server` - Backend Express server
-- `/shared` - Shared TypeScript types and schemas
-
-## Tech Stack
-
-- Frontend:
-  - React
-  - TypeScript
-  - TanStack Query
-  - Tailwind CSS
-  - shadcn/ui components
-  - Wouter for routing
-
-- Backend:
-  - Express.js
-  - TypeScript
-  - In-memory storage (can be extended to use a database)
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!
