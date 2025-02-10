@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import Hero from "@/components/hero";
 import CourseCard from "@/components/course-card";
 import Newsletter from "@/components/newsletter";
+import Testimonials from "@/components/testimonials";
 import { type Course } from "@shared/schema";
 
 export default function Home() {
@@ -12,10 +13,10 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      
+
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-center mb-8">Our Courses</h2>
-        
+
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...Array(6)].map((_, i) => (
@@ -31,6 +32,7 @@ export default function Home() {
         )}
       </section>
 
+      <Testimonials />
       <Newsletter />
     </div>
   );
