@@ -1,0 +1,35 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo "Installing source dependencies..."
+      - npm ci
+
+  pre_build:
+    commands:
+      - echo "Running code validation and tests..."
+      - npm run lint
+      - npm test
+
+  build:
+    commands:
+      - echo "Building the application storefront..."
+      - npm run build
+
+  post_build:
+    commands:
+      - echo "Build completed successfully on $(date)"
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist
+  discard-paths: no
+
+cache:
+  paths:
+    - 'node_modules/**/*'
+    - '~/.npm/**/*'
