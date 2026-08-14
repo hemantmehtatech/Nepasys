@@ -10,4 +10,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: 'src/main/webapp'
+  base-directory: 'src/main'
